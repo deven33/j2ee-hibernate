@@ -1,6 +1,5 @@
 package com.hibernate.curd.dao;
 
-import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -9,7 +8,14 @@ import org.hibernate.cfg.Configuration;
 import com.hibernate.curd.entity.Instructor;
 import com.hibernate.curd.entity.InstructorDetail;
 
-public class InstructorDeleteDemo {
+/**
+ * @author deven
+ * 
+ * deleting id from instructor details will delete 
+ * corresponding record from instructor as well
+ *
+ */
+public class InstructorDetailsDeleteDemo {
 
 	public static void main(String[] args) {
 		
@@ -19,20 +25,18 @@ public class InstructorDeleteDemo {
 				.buildSessionFactory();
 		//create session
 		Session session = sf.getCurrentSession();;
-		
+		int id=2;
 		
 		try {
 			session.beginTransaction();
-			int id=2;
-			Instructor instructor=session.get(Instructor.class, id);
-			if(instructor!=null) {
-				session.delete(instructor);
+			InstructorDetail instructorDetail = session.get(InstructorDetail.class, id);
+			if(instructorDetail!=null) {
+				session.delete(instructorDetail);
 			}
 			session.getTransaction().commit();
 			
 		}
 		finally {
-
 			sf.close();
 		}
 	}

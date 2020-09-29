@@ -24,8 +24,8 @@ public class InstructorDemo {
 		try {
 			
 			//create object
-			Instructor instructor=new Instructor("sana2","syedd", "sana@cts.com");
-			InstructorDetail instructorDetail=new InstructorDetail("sana2 channel","dancing");
+			Instructor instructor=new Instructor("sana4","syedd", "sana4@cts.com");
+			InstructorDetail instructorDetail=new InstructorDetail("sana4 channel3","dancing4");
 			//associate object
 			instructor.setInstructorDetail(instructorDetail);
 			//begin transaction 
