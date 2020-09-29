@@ -68,8 +68,4 @@ public class InstructorDetail {
 		this.instructor = instructor;
 	}
 	
-	
-	
-	
-	
 }

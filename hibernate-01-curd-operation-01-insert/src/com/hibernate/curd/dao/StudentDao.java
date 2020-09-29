@@ -22,8 +22,7 @@ public class StudentDao {
 			//create student object
 			StudentEntity se= new StudentEntity("Shaheen", "uhuuu", "sanad@cts.com");
 			//start transaction
-			session.beginTransaction();
-			
+			session.beginTransaction();			
 			//save data
 			session.save(se);
 			
