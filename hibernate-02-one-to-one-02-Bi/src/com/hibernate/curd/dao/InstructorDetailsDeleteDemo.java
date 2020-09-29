@@ -30,6 +30,12 @@ public class InstructorDetailsDeleteDemo {
 		try {
 			session.beginTransaction();
 			InstructorDetail instructorDetail = session.get(InstructorDetail.class, id);
+			//print the instructor details
+			System.out.println("Instructor details:"+instructorDetail);
+			
+			// print associated instructor
+			System.out.println("Associated Instructor:"+instructorDetail.getInstructor());
+			
 			if(instructorDetail!=null) {
 				session.delete(instructorDetail);
 			}
