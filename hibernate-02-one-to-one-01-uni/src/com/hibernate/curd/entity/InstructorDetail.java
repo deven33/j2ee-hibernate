@@ -52,7 +52,5 @@ public class InstructorDetail {
 	public void setHobby(String hobby) {
 		this.hobby = hobby;
 	}
-
-	
 	
 }

@@ -20,7 +20,7 @@ public class StudentDao {
 			
 			System.out.println("save student data");
 			//create student object
-			StudentEntity se= new StudentEntity("Shaheen", "syedd", "sanad@cts.com");
+			StudentEntity se= new StudentEntity("Shaheen", "uhuuu", "sanad@cts.com");
 			//start transaction
 			session.beginTransaction();
 			
